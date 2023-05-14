@@ -70,13 +70,44 @@ class _homeState extends State<home> {
       builder: (BuildContext context, widget) {
         return Container(
           margin: EdgeInsets.all(carouselItemMargin),
-          child: Center(child: widget),
+          child:Container(child: widget,),
+          padding: EdgeInsets.only(top: 120,bottom: 470), 
+          
         );
       },
       child: Container(
+        
         child: cards[position],
       ),
     );
+  }
+}
+
+class HeaderFb1 extends StatelessWidget {
+  final String text;
+  final String subtitle;
+  const HeaderFb1({required this.text,this.subtitle="", Key? key}):super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            text,
+            style: const TextStyle(
+                fontSize: 18, fontWeight: FontWeight.bold, color: Color.fromARGB(2, 347, 80, 50)),
+          ),
+          Text(
+            subtitle,
+            style: const TextStyle(
+                fontSize: 12, fontWeight: FontWeight.normal, color: Color.fromARGB(255, 202, 153, 153)),
+          ),
+        ],
+    );
+    
   }
 }
 
@@ -99,6 +130,8 @@ class CardFb1 extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
+        
+        
         width: 250,
         height: 230,
         padding: const EdgeInsets.all(30.0),
@@ -114,6 +147,7 @@ class CardFb1 extends StatelessWidget {
           ],
         ),
         child: Column(
+          
           children: [
             Image.network(imageUrl, height: 90, fit: BoxFit.cover),
             const Spacer(),
@@ -144,3 +178,81 @@ class CardFb1 extends StatelessWidget {
     );
   }
 }
+
+// HeaderFb1(text:"", subtitle:"")
+
+// class HeaderFb1 extends StatelessWidget {
+//   final String text;
+//   final String subtitle;
+//   const HeaderFb1({required this.text,this.subtitle="", Key? key}):super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//         mainAxisAlignment: MainAxisAlignment.start,
+//         crossAxisAlignment: CrossAxisAlignment.start,
+//         mainAxisSize: MainAxisSize.min,
+//         children: [
+//           Text(
+//             text,
+//             style: const TextStyle(
+//                 fontSize: 18, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 147, 20, 20)),
+//           ),
+//           Text(
+//             subtitle,
+//             style: const TextStyle(
+//                 fontSize: 12, fontWeight: FontWeight.normal, color: Color.fromARGB(255, 202, 153, 153)),
+//           ),
+//         ],
+//     );
+//   }
+// }
+
+
+
+// class HeaderFb1 extends StatelessWidget {
+//   final String text;
+//   final String subtitle;
+//   const HeaderFb1({required this.text,this.subtitle="", Key? key}):super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//         mainAxisAlignment: MainAxisAlignment.start,
+//         crossAxisAlignment: CrossAxisAlignment.start,
+//         mainAxisSize: MainAxisSize.min,
+//         children: [
+//           Text(
+//             text,
+//             style: const TextStyle(
+//                 fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+//           ),
+//           Text(
+//             subtitle,
+//             style: const TextStyle(
+//                 fontSize: 12, fontWeight: FontWeight.normal, color: Colors.grey),
+//           ),
+//         ],
+//     );
+//   }
+// }
+
+
+
+// Column(
+//         mainAxisAlignment: MainAxisAlignment.start,
+//         crossAxisAlignment: CrossAxisAlignment.start,
+//         mainAxisSize: MainAxisSize.min,
+//         children: [
+//           Text(
+//             "Header",
+//             style: const TextStyle(
+//                 fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+//           ),
+//           Text(
+//             "Subtitle",
+//             style: const TextStyle(
+//                 fontSize: 12, fontWeight: FontWeight.normal, color: Colors.grey),
+//           ),
+//         ],
+//       )
