@@ -173,12 +173,6 @@ class CardFb1 extends StatelessWidget {
   }
 }
 
-// HeaderFb1(text:"", subtitle:"")
-
-// class HeaderFb1 extends StatelessWidget {
-//   final String text;
-//   final String subtitle;
-//   const HeaderFb1({required this.text,this.subtitle="", Key? key}):super(key: key);
 
 //   @override
 //   Widget build(BuildContext context) {
