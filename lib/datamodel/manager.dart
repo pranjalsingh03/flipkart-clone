@@ -12,4 +12,4 @@ class Manager {
             "Received: '$description'");
       }
     }
-  }
+}
