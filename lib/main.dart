@@ -1,6 +1,5 @@
 import "package:flutter/material.dart";
 import "package:project/pages/home_page.dart";
-import "package:project/pages/managers_page.dart";
 
 
 void main() => runApp(new MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primaryColor: Colors.green[400],
       ),
-      home: new ManagersPage(),
+      home: new HomePage(),
     );
   }
 }
