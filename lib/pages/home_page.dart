@@ -1,12 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:project/pages/managers_page.dart';
-import 'package:project/pages/statistics_page.dart';
-import 'package:project/pages/stores_page.dart';
-import 'package:project/pages/surveys_page.dart';
+
 
 import '../components/bottomnav.dart';
-import '../strings.dart';
 
 
 // class DrawerItem {
@@ -16,6 +13,8 @@ import '../strings.dart';
 // }
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   // final drawerItems = [
   //  DrawerItem(Strings.profileTitle, Icons.person),
   //  DrawerItem(Strings.surveysTitle, Icons.book),
