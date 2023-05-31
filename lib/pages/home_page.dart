@@ -56,7 +56,7 @@ class HomePageState extends State<HomePage> {
   //   Navigator.of(context).pop(); // close the drawer
   // }
 
-  @override
+  // @override
   // void initState() {
   //   super.initState();
   // }
@@ -90,15 +90,17 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(left: 10, top: 30, right: 20),
+              padding: EdgeInsets.only(left: 10, top: 50, right: 20),
+              // alignment: Alignment.topCenter,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      
                       Text(
                         "Hi $username,",
                         style: const TextStyle(
@@ -106,13 +108,13 @@ class HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.bold,
                             color: Colors.black),
                       ),
-                      Text(
-                        "$status",
-                        style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.grey),
-                      ),
+                      // Text(
+                      //   "$status",
+                      //   style: const TextStyle(
+                      //       fontSize: 16,
+                      //       fontWeight: FontWeight.normal,
+                      //       color: Colors.grey),
+                      // ),
                     ],
                   ),
                   SizedBox(
@@ -172,7 +174,7 @@ class HomePageState extends State<HomePage> {
                 padding: EdgeInsets.only(left: 20, top: 100, right: 20),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 150,
+                  height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       gradient: const LinearGradient(
@@ -229,7 +231,7 @@ class HomePageState extends State<HomePage> {
                 child: Container(
                   padding: EdgeInsets.only(left: 30),
                   width: MediaQuery.of(context).size.width,
-                  height: 150,
+                  height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       gradient: const LinearGradient(
@@ -239,7 +241,7 @@ class HomePageState extends State<HomePage> {
                       Align(
                           alignment: Alignment.centerLeft,
                           child: 
-                          Image.asset("assets/images/affileatmar.png", height: 130)),
+                          Image.asset("assets/images/affileatmar.png",)),
                       Align(
                         alignment: Alignment.topRight,
                         child: Padding(
@@ -291,7 +293,7 @@ class HomePageState extends State<HomePage> {
                 child: Container(
                   padding: EdgeInsets.only(left: 30),
                   width: MediaQuery.of(context).size.width,
-                  height: 150,
+                  height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       gradient: const LinearGradient(
@@ -305,10 +307,10 @@ class HomePageState extends State<HomePage> {
                       Align(
                         alignment: Alignment.topRight,
                         child: Padding(
-                          padding: EdgeInsets.only(top: 20, right: 60),
+                          padding: EdgeInsets.only(top: 50, right: 30),
                           child: Column(children: [
                             Text(
-                              "message",
+                              "Connections",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 30,
@@ -354,7 +356,7 @@ class HomePageState extends State<HomePage> {
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.only(left: 26, top: 10),
-                  height: 150,
+                  height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       gradient: const LinearGradient(
