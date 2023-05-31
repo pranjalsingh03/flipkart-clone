@@ -66,7 +66,7 @@ class HomePageState extends State<HomePage> {
     const primaryColor = Color(0xff4338CA);
     const secondaryColor = Color(0xff6D28D9);
     const accentColor = Color(0xffffffff);
-    const backgroundColor = Color(0xffffffff);
+    const backgroundColor = Color.fromARGB(255, 103, 196, 243);
     const errorColor = Color(0xffEF4444);
     var username = "Pranjal";
     var status =
@@ -117,7 +117,7 @@ class HomePageState extends State<HomePage> {
                       // ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 75,
                     width: 75,
                     child: ClipRRect(
@@ -138,7 +138,7 @@ class HomePageState extends State<HomePage> {
                 items: [1, 2, 3, 4, 5].map((i) {
                   return Builder(
                     builder: (BuildContext context) {
-                      return SizedBox(
+                      return const SizedBox(
                     height: 125,
                     width: 125,
                     child: ClipRRect(
@@ -163,15 +163,15 @@ class HomePageState extends State<HomePage> {
                 }).toList(),
               ),
             ),
-            new GestureDetector(
+            GestureDetector(
               onTap: () async {
                 Navigator.pop(context);
 
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ManagersPage()));
               },
-              child: new Container(
-                padding: EdgeInsets.only(left: 20, top: 100, right: 20),
+              child: Container(
+                padding: const EdgeInsets.only(left: 20, top: 100, right: 20),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   height: 120,
@@ -184,8 +184,8 @@ class HomePageState extends State<HomePage> {
                     Align(
                       alignment: Alignment.topRight,
                       child: Padding(
-                        padding: EdgeInsets.only(top: 20, right: 45),
-                        child: Column(children: [
+                        padding: const EdgeInsets.only(top: 20, right: 45),
+                        child: Column(children: const [
                           Text(
                             "Online\nShopping",
                             style: TextStyle(
@@ -220,16 +220,16 @@ class HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            new GestureDetector(
+            GestureDetector(
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ManagersPage()));
               },
-              child: new Container(
-                padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+              child: Container(
+                padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
                 child: Container(
-                  padding: EdgeInsets.only(left: 30),
+                  padding: const EdgeInsets.only(left: 30),
                   width: MediaQuery.of(context).size.width,
                   height: 120,
                   decoration: BoxDecoration(
@@ -245,8 +245,8 @@ class HomePageState extends State<HomePage> {
                       Align(
                         alignment: Alignment.topRight,
                         child: Padding(
-                          padding: EdgeInsets.only(top: 50, right: 50),
-                          child: Column(children: [
+                          padding: const EdgeInsets.only(top: 50, right: 50),
+                          child: Column(children: const [
                             Text(
                               "Affileate",
                               style: TextStyle(
@@ -282,13 +282,13 @@ class HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            new GestureDetector(
+            GestureDetector(
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ManagersPage()));
               },
-              child: new Container(
+              child:Container(
                 padding: EdgeInsets.only(left: 20, top: 20, right: 20),
                 child: Container(
                   padding: EdgeInsets.only(left: 30),
@@ -308,7 +308,7 @@ class HomePageState extends State<HomePage> {
                         alignment: Alignment.topRight,
                         child: Padding(
                           padding: EdgeInsets.only(top: 50, right: 30),
-                          child: Column(children: [
+                          child: Column(children: const [
                             Text(
                               "Connections",
                               style: TextStyle(
@@ -344,13 +344,13 @@ class HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            new GestureDetector(
+            GestureDetector(
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => ManagersPage()));
               },
-              child: new Container(
+              child: Container(
                 padding:
                     EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 40),
                 child: Container(
@@ -367,7 +367,7 @@ class HomePageState extends State<HomePage> {
                       Align(
                         alignment: Alignment.center,
                         
-                        child: Column(children: [
+                        child: Column(children: const [
                           Text(
                             "spam",
                             style: TextStyle(
@@ -408,6 +408,7 @@ class HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      
 
 
       // appBar: AppBar(
