@@ -31,66 +31,15 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  int _selectedDrawerIndex = 0;
-
-   _getDrawerItemWidget(int pos) {
-    switch (pos) {
-      case 0:
-        return ManagersPage();
-      case 1:
-        return SurveysPage();
-      case 2:
-        return StoresPage();
-      case 3:
-        return ManagersPage();
-      case 4:
-        return StatisticsPage();  
-
-      default:
-        return Text("Error");
-    }
-  }
-
-  // _onSelectItem(int index) {
-  //   setState(() => _selectedDrawerIndex = index);
-  //   Navigator.of(context).pop(); // close the drawer
-  // }
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  // }
-
   @override
   Widget build(BuildContext context) {
-    const primaryColor = Color(0xff4338CA);
-    const secondaryColor = Color(0xff6D28D9);
-    const accentColor = Color(0xffffffff);
-    const backgroundColor = Color.fromARGB(255, 103, 196, 243);
-    const errorColor = Color(0xffEF4444);
     var username = "Pranjal";
-    var status =
-        "Shop Management System";
-
-    // var drawerOptions = [];
-    // for (var i = 0; i < widget.drawerItems.length; i++) {
-    //   var d = widget.drawerItems[i];
-    //   drawerOptions.add(
-    //      ListTile(
-    //         leading: Icon(d.icon),
-    //         title: Text(d.title),
-    //         selected: i == _selectedDrawerIndex,
-    //         onTap: () => _onSelectItem(i),
-    //       )
-    //   );
-    // }
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(left: 10, top: 50, right: 20),
+              padding: const EdgeInsets.only(left: 10, top: 50, right: 20),
               // alignment: Alignment.topCenter,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -131,7 +80,7 @@ class HomePageState extends State<HomePage> {
             ),
             
             Container(
-              padding: EdgeInsets.only(left: 1, top: 20, right: 1),
+              padding: const EdgeInsets.only(left: 1, top: 20, right: 1),
               child: CarouselSlider(
                 
                 options: CarouselOptions(height: 100),
@@ -289,9 +238,9 @@ class HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => ManagersPage()));
               },
               child:Container(
-                padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+                padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
                 child: Container(
-                  padding: EdgeInsets.only(left: 30),
+                  padding: const EdgeInsets.only(left: 30),
                   width: MediaQuery.of(context).size.width,
                   height: 120,
                   decoration: BoxDecoration(
@@ -307,7 +256,7 @@ class HomePageState extends State<HomePage> {
                       Align(
                         alignment: Alignment.topRight,
                         child: Padding(
-                          padding: EdgeInsets.only(top: 50, right: 30),
+                          padding: const EdgeInsets.only(top: 50, right: 30),
                           child: Column(children: const [
                             Text(
                               "Connections",
@@ -352,10 +301,10 @@ class HomePageState extends State<HomePage> {
               },
               child: Container(
                 padding:
-                    EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 40),
+                    const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 40),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.only(left: 26, top: 10),
+                  padding: const EdgeInsets.only(left: 26, top: 10),
                   height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -367,7 +316,7 @@ class HomePageState extends State<HomePage> {
                       Align(
                         alignment: Alignment.center,
                         
-                        child: Column(children: [
+                        child: Column(children: const [
                           Text(
                             "spam",
                             style: TextStyle(
@@ -426,7 +375,7 @@ class HomePageState extends State<HomePage> {
       //   ),
       // ),
       // body: _getDrawerItemWidget(_selectedDrawerIndex),
-      bottomNavigationBar: btmnav(),
+      bottomNavigationBar: const btmnav(),
     );
   }
 }
