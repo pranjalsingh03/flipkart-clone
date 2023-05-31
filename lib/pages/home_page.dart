@@ -367,7 +367,7 @@ class HomePageState extends State<HomePage> {
                       Align(
                         alignment: Alignment.center,
                         
-                        child: Column(children: const [
+                        child: Column(children: [
                           Text(
                             "spam",
                             style: TextStyle(
