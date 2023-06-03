@@ -6,11 +6,7 @@ import 'package:project/pages/managers_page.dart';
 import '../components/bottomnav.dart';
 
 
-// class DrawerItem {
-//   String title;
-//   IconData icon;
-//   DrawerItem(this.title, this.icon);
-// }
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
