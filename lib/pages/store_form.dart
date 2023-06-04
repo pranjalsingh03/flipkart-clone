@@ -39,12 +39,12 @@ class StoreFormState extends State<StoreForm>
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
                TextFormField(
-                decoration:  InputDecoration( labelText: "Enter Name", fillColor: Colors.white),
+                decoration:  const InputDecoration( labelText: "Enter Name", fillColor: Colors.white),
                 keyboardType: TextInputType.text,
                 controller: nameController,
               ),
                TextFormField(
-                decoration:  InputDecoration( labelText: "Enter Description"),
+                decoration:  const InputDecoration( labelText: "Enter Description"),
                 keyboardType: TextInputType.text, 
                 controller: descriptionController,
               ),
@@ -56,7 +56,7 @@ class StoreFormState extends State<StoreForm>
                   color: Colors.green[400],
                   splashColor: Colors.teal,
                   textColor: Colors.white,
-                  child:  Text("Submit"),
+                  child:  const Text("Submit"),
                   onPressed: () { onAddPressed(); }
                 ),
               ),
