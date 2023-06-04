@@ -3,19 +3,20 @@ import 'package:flutter/material.dart';
 import '../datamodel/store.dart';
 
 
+// ignore: use_key_in_widget_constructors
 class StoreForm extends StatefulWidget
 {
   @override
-  State createState() => new StoreFormState();
+  State createState() => StoreFormState();
 }
 
 class StoreFormState extends State<StoreForm>
 {
-  TextEditingController nameController = new TextEditingController();
-  TextEditingController descriptionController = new TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
 
   void onAddPressed () {
-    final item = new Store(nameController.text, descriptionController.text);
+    final item = Store(nameController.text, descriptionController.text);
     Navigator.pop(context, item);     
   }
 
