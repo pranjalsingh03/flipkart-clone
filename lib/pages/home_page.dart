@@ -6,8 +6,6 @@ import 'package:project/pages/managers_page.dart';
 import '../components/bottomnav.dart';
 
 
-
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -52,13 +50,7 @@ class HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.bold,
                             color: Colors.black),
                       ),
-                      // Text(
-                      //   "$status",
-                      //   style: const TextStyle(
-                      //       fontSize: 16,
-                      //       fontWeight: FontWeight.normal,
-                      //       color: Colors.grey),
-                      // ),
+                      
                     ],
                   ),
                   const SizedBox(
