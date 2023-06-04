@@ -22,41 +22,41 @@ class StoreFormState extends State<StoreForm>
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-       appBar: new AppBar(
-        title: new Text("New Store"),
-        leading: new IconButton(
-          icon: new Icon(Icons.close),
+    return  Scaffold(
+       appBar:  AppBar(
+        title:  Text("New Store"),
+        leading:  IconButton(
+          icon:  Icon(Icons.close),
           onPressed: (){ Navigator.pop(context, null); },
         ),
       ),
       backgroundColor: Colors.white,
-      body: new Container(
+      body:  Container(
         padding: const EdgeInsets.all(40.0),
-        child: new Form(
+        child:  Form(
           // autovalidate: true,
-          child: new Column(
+          child:  Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              new TextFormField(
-                decoration: new InputDecoration( labelText: "Enter Name", fillColor: Colors.white),
+               TextFormField(
+                decoration:  InputDecoration( labelText: "Enter Name", fillColor: Colors.white),
                 keyboardType: TextInputType.text,
                 controller: nameController,
               ),
-              new TextFormField(
-                decoration: new InputDecoration( labelText: "Enter Description"),
+               TextFormField(
+                decoration:  InputDecoration( labelText: "Enter Description"),
                 keyboardType: TextInputType.text, 
                 controller: descriptionController,
               ),
-              new Container (
+               Container (
                 padding: const EdgeInsets.symmetric(vertical: 40.0),
-                child: new MaterialButton(
+                child:  MaterialButton(
                   height: 50.0,
                   minWidth: 150.0,
                   color: Colors.green[400],
                   splashColor: Colors.teal,
                   textColor: Colors.white,
-                  child: new Text("Submit"),
+                  child:  Text("Submit"),
                   onPressed: () { onAddPressed(); }
                 ),
               ),
