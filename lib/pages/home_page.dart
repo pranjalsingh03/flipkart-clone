@@ -240,29 +240,6 @@ class HomePageState extends State<HomePage> {
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold),
                           ),
-                          // Container(
-                          //   padding:
-                          //       EdgeInsets.only(top: 10, right: 78, left: 90),
-                          //   child: Text(
-                          //     "link",
-                          //     style: TextStyle(
-                          //         color: Colors.white,
-                          //         fontSize: 16,
-                          //         fontWeight: FontWeight.bold),
-                          //   ),
-                          // ),
-                          // Container(
-                          //   padding: EdgeInsets.only(
-                          //     top: 5,
-                          //   ),
-                          //   child: Text(
-                          //     "totalspam",
-                          //     style: TextStyle(
-                          //         color: Colors.white,
-                          //         fontSize: 16,
-                          //         fontWeight: FontWeight.bold),
-                          //   ),
-                          // )
                         ]),
                       ),
                     ],
@@ -273,24 +250,6 @@ class HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      
-
-
-      // appBar: AppBar(
-      //   // here we display the title corresponding to the fragment
-      //   // you can instead choose to have a static title
-      //   title: Text(widget.drawerItems[_selectedDrawerIndex].title),
-      // ),
-      // drawer: Drawer(
-      //   child: Column(
-      //     children: <Widget>[
-      //      UserAccountsDrawerHeader(
-      //           accountName: Text("Admin"), accountEmail: null),
-      //       // Column(children: drawerOptions)
-      //     ],
-      //   ),
-      // ),
-      // body: _getDrawerItemWidget(_selectedDrawerIndex),
       bottomNavigationBar: const btmnav(),
     );
   }
