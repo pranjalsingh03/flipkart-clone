@@ -83,17 +83,6 @@ class HomePageState extends State<HomePage> {
                       child: ColoredBox(color: Colors.green),
                     ),
                   );
-                      // Container(
-                      //     margin: EdgeInsets.symmetric(horizontal: 5.0),
-                      //     decoration: BoxDecoration(
-                      //         // color: Colors.amber,
-
-                      //         borderRadius: BorderRadius.circular(20)),
-                      //     child: Center(
-                      //         child: Image(
-                      //             image: AssetImage(
-                      //       "$i",
-                      //     ))));
                     },
                   );
                 }).toList(),
@@ -129,26 +118,6 @@ class HomePageState extends State<HomePage> {
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold),
                           ),
-                          // Container(
-                          //   padding: EdgeInsets.only(top: 5, right: 30),
-                          //   child: Text(
-                          //     "$misscalls",
-                          //     style: TextStyle(
-                          //         color: Colors.white,
-                          //         fontSize: 16,
-                          //         fontWeight: FontWeight.bold),
-                          //   ),
-                          // ),
-                          // Container(
-                          //   padding: EdgeInsets.only(top: 5, left: 25),
-                          //   child: Text(
-                          //     "suspicious",
-                          //     style: TextStyle(
-                          //         color: Colors.white,
-                          //         fontSize: 16,
-                          //         fontWeight: FontWeight.bold),
-                          //   ),
-                          // ),
                         ]),
                       ),
                     ),
@@ -190,26 +159,6 @@ class HomePageState extends State<HomePage> {
                                   fontSize: 30,
                                   fontWeight: FontWeight.bold),
                             ),
-                            // Container(
-                            //   padding: EdgeInsets.only(top: 5, right: 50),
-                            //   child: Text(
-                            //     "totalmess",
-                            //     style: TextStyle(
-                            //         color: Colors.white,
-                            //         fontSize: 16,
-                            //         fontWeight: FontWeight.bold),
-                            //   ),
-                            // ),
-                            // Container(
-                            //   padding: EdgeInsets.only(top: 5, left: 28),
-                            //   child: Text(
-                            //     "suspiciousmess",
-                            //     style: TextStyle(
-                            //         color: Colors.white,
-                            //         fontSize: 16,
-                            //         fontWeight: FontWeight.bold),
-                            //   ),
-                            // ),
                           ]),
                         ),
                       ),
@@ -252,26 +201,6 @@ class HomePageState extends State<HomePage> {
                                   fontSize: 30,
                                   fontWeight: FontWeight.bold),
                             ),
-                            // Container(
-                            //   padding: EdgeInsets.only(top: 5, right: 50),
-                            //   child: Text(
-                            //     "totalmess",
-                            //     style: TextStyle(
-                            //         color: Colors.white,
-                            //         fontSize: 16,
-                            //         fontWeight: FontWeight.bold),
-                            //   ),
-                            // ),
-                            // Container(
-                            //   padding: EdgeInsets.only(top: 5, left: 28),
-                            //   child: Text(
-                            //     "suspiciousmess",
-                            //     style: TextStyle(
-                            //         color: Colors.white,
-                            //         fontSize: 16,
-                            //         fontWeight: FontWeight.bold),
-                            //   ),
-                            // ),
                           ]),
                         ),
                       ),
