@@ -9,14 +9,6 @@ import '../components/bottomnav.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
-  // final drawerItems = [
-  //  DrawerItem(Strings.profileTitle, Icons.person),
-  //  DrawerItem(Strings.surveysTitle, Icons.book),
-  //  DrawerItem(Strings.storesTitle, Icons.store),
-  //  DrawerItem(Strings.managersTitle, Icons.group),
-  //  DrawerItem(Strings.statisticsTitle, Icons.pie_chart),
-  // ];
-
   @override
   State<StatefulWidget> createState() {
     return HomePageState();
