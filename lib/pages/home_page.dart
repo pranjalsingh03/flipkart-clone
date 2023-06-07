@@ -25,14 +25,11 @@ class HomePageState extends State<HomePage> {
           children: <Widget>[
             Container(
               padding: const EdgeInsets.only(left: 10, top: 50, right: 20),
-              // alignment: Alignment.topCenter,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       
                       Text(
