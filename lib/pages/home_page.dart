@@ -2,9 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:project/pages/managers_page.dart';
 
-
 import '../components/bottomnav.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,7 +29,6 @@ class HomePageState extends State<HomePage> {
                 children: [
                   Column(
                     children: [
-                      
                       Text(
                         "Hi $username,",
                         style: const TextStyle(
@@ -39,7 +36,6 @@ class HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.bold,
                             color: Colors.black),
                       ),
-                      
                     ],
                   ),
                   const SizedBox(
@@ -54,24 +50,22 @@ class HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            
             Container(
               padding: const EdgeInsets.only(left: 1, top: 20, right: 1),
               child: CarouselSlider(
-                
                 options: CarouselOptions(height: 100),
                 items: [1, 2, 3, 4, 5].map((i) {
                   return Builder(
                     builder: (BuildContext context) {
                       return const SizedBox(
-                    height: 125,
-                    width: 125,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(44)),
-                      // child: Image.asset("assets/images/app.png"),
-                      child: ColoredBox(color: Colors.green),
-                    ),
-                  );
+                        height: 125,
+                        width: 125,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(44)),
+                          // child: Image.asset("assets/images/app.png"),
+                          child: ColoredBox(color: Colors.green),
+                        ),
+                      );
                     },
                   );
                 }).toList(),
@@ -80,7 +74,6 @@ class HomePageState extends State<HomePage> {
             GestureDetector(
               onTap: () async {
                 Navigator.pop(context);
-
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ManagersPage()));
               },
@@ -91,8 +84,10 @@ class HomePageState extends State<HomePage> {
                   height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      gradient: const LinearGradient(
-                          colors: [Color.fromARGB(255, 57, 99, 204), Color.fromARGB(255, 5, 56, 114)])),
+                      gradient: const LinearGradient(colors: [
+                        Color.fromARGB(255, 57, 99, 204),
+                        Color.fromARGB(255, 5, 56, 114)
+                      ])),
                   child: Stack(children: [
                     Image.asset("assets/images/onlineshopping.png"),
                     Align(
@@ -103,7 +98,7 @@ class HomePageState extends State<HomePage> {
                           Text(
                             "Online\nShopping",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color.fromARGB(255, 0, 0, 0),
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -128,14 +123,17 @@ class HomePageState extends State<HomePage> {
                   height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      gradient: const LinearGradient(
-                          colors: [Color.fromARGB(255, 57, 99, 204), Color.fromARGB(255, 5, 56, 114)])),
+                      gradient: const LinearGradient(colors: [
+                        Color.fromARGB(255, 57, 99, 204),
+                        Color.fromARGB(255, 5, 56, 114)
+                      ])),
                   child: Stack(
                     children: [
                       Align(
                           alignment: Alignment.centerLeft,
-                          child: 
-                          Image.asset("assets/images/affileatmar.png",)),
+                          child: Image.asset(
+                            "assets/images/affileatmar.png",
+                          )),
                       Align(
                         alignment: Alignment.topRight,
                         child: Padding(
@@ -162,7 +160,7 @@ class HomePageState extends State<HomePage> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ManagersPage()));
               },
-              child:Container(
+              child: Container(
                 padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
                 child: Container(
                   padding: const EdgeInsets.only(left: 30),
@@ -170,14 +168,16 @@ class HomePageState extends State<HomePage> {
                   height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      gradient: const LinearGradient(
-                          colors: [Color.fromARGB(255, 57, 99, 204), Color.fromARGB(255, 5, 56, 114)])),
+                      gradient: const LinearGradient(colors: [
+                        Color.fromARGB(255, 57, 99, 204),
+                        Color.fromARGB(255, 5, 56, 114)
+                      ])),
                   child: Stack(
                     children: [
                       Align(
                           alignment: Alignment.centerLeft,
-                          child: 
-                          Image.asset("assets/images/connections.png", height: 130)),
+                          child: Image.asset("assets/images/connections.png",
+                              height: 130)),
                       Align(
                         alignment: Alignment.topRight,
                         child: Padding(
@@ -201,26 +201,27 @@ class HomePageState extends State<HomePage> {
             GestureDetector(
               onTap: () {
                 Navigator.pop(context);
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => ManagersPage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ManagersPage()));
               },
               child: Container(
-                padding:
-                    const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 40),
+                padding: const EdgeInsets.only(
+                    left: 20, top: 20, right: 20, bottom: 40),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.only(left: 26, top: 10),
                   height: 120,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      gradient: const LinearGradient(
-                          colors: [Color.fromARGB(255, 57, 99, 204), Color.fromARGB(255, 5, 56, 114)])),
+                      gradient: const LinearGradient(colors: [
+                        Color.fromARGB(255, 57, 99, 204),
+                        Color.fromARGB(255, 5, 56, 114)
+                      ])),
                   child: Stack(
                     children: [
                       Image.asset("assets/images/contactus.png"),
                       Align(
                         alignment: Alignment.center,
-                        
                         child: Column(children: const [
                           Text(
                             "spam",
