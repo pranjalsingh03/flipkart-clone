@@ -80,14 +80,15 @@ class HomePageState extends State<HomePage> {
               child: Container(
                 padding: const EdgeInsets.only(left: 20, top: 100, right: 20),
                 child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 120,
+                  padding: EdgeInsets.only(left: 20),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      gradient: const LinearGradient(colors: [
-                        Color.fromARGB(255, 57, 99, 204),
-                        Color.fromARGB(255, 5, 56, 114)
-                      ])),
+                    border: Border(left: BorderSide(color: Colors.black,
+                      width: 3.0),top: BorderSide(color: Colors.black,
+                      width: 3.0),),
+                    borderRadius: BorderRadius.circular(30),
+                    
+                    
+                  ),
                   child: Stack(children: [
                     Image.asset("assets/images/onlineshopping.png"),
                     Align(
