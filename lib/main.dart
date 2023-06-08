@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:project/pages/gridview.dart";
 import "package:project/pages/home_page.dart";
 
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       // theme: new ThemeData(
       //   primaryColor: Colors.green[400],
       // ),
-      home: HomePage(),
+      home: Magan(),
     );
   }
 }
