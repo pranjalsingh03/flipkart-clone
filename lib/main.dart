@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       // theme: new ThemeData(
       //   primaryColor: Colors.green[400],
       // ),
-      home: Magan(),
+      home: HomePage(),
     );
   }
 }
