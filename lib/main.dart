@@ -3,15 +3,12 @@ import "package:project/pages/gridview.dart";
 import "package:project/pages/home_page.dart";
 
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build (BuildContext context) {
-    return MaterialApp(
-      // theme: new ThemeData(
-      //   primaryColor: Colors.green[400],
-      // ),
+    return const MaterialApp(
       home: HomePage(),
     );
   }
