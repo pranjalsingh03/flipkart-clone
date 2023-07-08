@@ -81,7 +81,7 @@ class HomePageState extends State<HomePage> {
                 child: Container(
                   padding: EdgeInsets.only(left: 20),
                   decoration: BoxDecoration(
-                    border: Border(left: BorderSide(color: Colors.black,
+                    border: const Border(left: BorderSide(color: Colors.black,
                       width: 3.0),top: BorderSide(color: Colors.black,
                       width: 3.0),),
                     borderRadius: BorderRadius.circular(30),
