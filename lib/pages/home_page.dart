@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:project/pages/managers_page.dart';
-
 import '../components/bottomnav.dart';
 
 class HomePage extends StatefulWidget {
