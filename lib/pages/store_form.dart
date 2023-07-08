@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import '../datamodel/store.dart';
 
 
@@ -23,7 +24,7 @@ class StoreFormState extends State<StoreForm>
   Widget build(BuildContext context) {
     return  Scaffold(
        appBar:  AppBar(
-        title:  Text("New Store"),
+        title:  const Text("New Store"),
         leading:  IconButton(
           icon:  Icon(Icons.close),
           onPressed: (){ Navigator.pop(context, null); },
