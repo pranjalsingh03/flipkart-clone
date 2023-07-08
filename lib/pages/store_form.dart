@@ -26,7 +26,7 @@ class StoreFormState extends State<StoreForm>
        appBar:  AppBar(
         title:  const Text("New Store"),
         leading:  IconButton(
-          icon:  Icon(Icons.close),
+          icon:  const Icon(Icons.close),
           onPressed: (){ Navigator.pop(context, null); },
         ),
       ),
