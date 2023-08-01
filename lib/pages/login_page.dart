@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:project/pages/home_page.dart';
 
-
-
-class LoginPage extends StatefulWidget
-{
+class LoginPage extends StatefulWidget {
   @override
-  State createState() => new LoginPageState();
+  State createState() => LoginPageState();
 }
 
-class LoginPageState extends State<LoginPage>
-{
-  TextEditingController emailController = new TextEditingController();
-  TextEditingController passwordController = new TextEditingController();
+class LoginPageState extends State<LoginPage> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
-  void onLoginPressed () {
-    print("OnLoginPressed "+emailController.text+" pw : "+passwordController.text);
+  void onLoginPressed() {
+    print("OnLoginPressed " +
+        emailController.text +
+        " pw : " +
+        passwordController.text);
     _loadHomePage();
   }
 
-  void _loadHomePage(){
-    Navigator.of(context).push( new MaterialPageRoute(
-        builder: (BuildContext context) {
-          return new HomePage();
-        }
-      )
-    );
+  void _loadHomePage() {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (BuildContext context) {
+      return HomePage();
+    }));
   }
 
   @override
@@ -35,62 +32,72 @@ class LoginPageState extends State<LoginPage>
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          // new Image(
-          //  image: new AssetImage("assets/mall.png"),
+          // Image(
+          //  image: AssetImage("assets/mall.png"),
           //   fit: BoxFit.cover,
           //   colorBlendMode: BlendMode.darken,
           //   color: Colors.black87,
           // ),
-          new Theme(
-              data: new ThemeData(
-                brightness: Brightness.dark,
-                inputDecorationTheme: new InputDecorationTheme(
-                  labelStyle: new TextStyle(color: Colors.tealAccent, fontSize: 25.0),
-                )),
+          Theme(
+              data: ThemeData(
+                  brightness: Brightness.dark,
+                  inputDecorationTheme: InputDecorationTheme(
+                    labelStyle:
+                        TextStyle(color: Colors.tealAccent, fontSize: 25.0),
+                  )),
               // isMaterialAppTheme: true,
-              child: new Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Image(
-                    image: new AssetImage("assets/images/mall.png"),
+                  Image(
+                    image: AssetImage("assets/images/mall.png"),
                     height: 140.0,
                     width: 170.0,
                   ),
-                  new Container(
+                  Container(
                     padding: const EdgeInsets.all(40.0),
-                    child: new Form(
+                    child: Form(
                         // autovalidate: true,
-                        child: new Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            new TextFormField(
-                              decoration: new InputDecoration( labelText: "Enter Email", fillColor: Colors.white),
-                              keyboardType: TextInputType.emailAddress,
-                              controller: emailController,
-                              ),
-                            new TextFormField(
-                              decoration: new InputDecoration( labelText: "Enter Password"),
-                              obscureText: true,
-                              keyboardType: TextInputType.text, 
-                              controller: passwordController,
+                        child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        const Padding(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'Email or Mobile No.',
                             ),
-                            new Container(
-                              padding: const EdgeInsets.symmetric(vertical: 40.0),
-                             child: new MaterialButton(
-                                height: 50.0,
-                                  minWidth: 150.0,
-                                  color: Color.fromARGB(255, 19, 232, 179),
-                                  splashColor: Colors.teal,
-                                  textColor: Colors.white,
-                                  child: new Text("Login"),
-                                  //onPressed: OnLoginCallBack(emailController.text, passwordController.text)),
-                                  onPressed: onLoginPressed),
-                            )
-                          ],
-                        )),
+                          ),
+                        ),
+                        const Padding(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'Password',
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(vertical: 40.0),
+                          child: MaterialButton(
+                              height: 50.0,
+                              minWidth: 150.0,
+                              color: Color.fromARGB(255, 19, 232, 179),
+                              splashColor: Colors.teal,
+                              textColor: Colors.white,
+                              child: Text("Login"),
+                              //onPressed: OnLoginCallBack(emailController.text, passwordController.text)),
+                              onPressed: onLoginPressed),
+                        )
+                      ],
+                    )),
                   )
                 ],
-              ) )
+              ))
         ],
       ),
     );
