@@ -74,10 +74,11 @@ class LoginPageState extends State<LoginPage> {
                         const Padding(
                           padding:
                               EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                          child: TextField(
+                          child: TextField(obscureText: true,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               hintText: 'Password',
+                              
                             ),
                           ),
                         ),
