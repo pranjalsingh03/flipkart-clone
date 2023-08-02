@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:project/pages/home_page.dart';
 import 'package:project/pages/newuser.dart';
 
+import 'forget_password.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   State createState() => LoginPageState();
@@ -30,6 +32,19 @@ class LoginPageState extends State<LoginPage> {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (BuildContext context) {
       return SignupPage();
+    }));
+  }
+    void onForgotPasswordPage() {
+    print("OnLoginPressed " +
+        emailController.text +
+        " pw : " +
+        passwordController.text);
+    _ForgotPasswordPageState();
+  }
+  void _ForgotPasswordPageState() {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (BuildContext context) {
+      return ForgotPasswordPage();
     }));
   }
 
@@ -109,7 +124,7 @@ class LoginPageState extends State<LoginPage> {
                           child: TextButton(
                               child: Text("Forget Password"),
                               //onPressed: OnLoginCallBack(emailController.text, passwordController.text)),
-                              onPressed: onLoginPressed),
+                              onPressed: onForgotPasswordPage),
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(vertical: 10.0),
