@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/pages/home_page.dart';
+import 'package:project/pages/newuser.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -25,10 +26,10 @@ class LoginPageState extends State<LoginPage> {
         passwordController.text);
     _loadNewUser();
   }
-   void _loadNewUser() {
+  void _loadNewUser() {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (BuildContext context) {
-      return HomePage();
+      return SignupPage();
     }));
   }
 
