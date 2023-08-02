@@ -18,6 +18,20 @@ class LoginPageState extends State<LoginPage> {
     _loadHomePage();
   }
 
+    void onNewUserPress() {
+    print("OnLoginPressed " +
+        emailController.text +
+        " pw : " +
+        passwordController.text);
+    _loadNewUser();
+  }
+   void _loadNewUser() {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (BuildContext context) {
+      return HomePage();
+    }));
+  }
+
   void _loadHomePage() {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (BuildContext context) {
@@ -55,7 +69,7 @@ class LoginPageState extends State<LoginPage> {
                     width: 170.0,
                   ),
                   Container(
-                    padding: const EdgeInsets.all(40.0),
+                    padding: const EdgeInsets.all(30.0),
                     child: Form(
                         // autovalidate: true,
                         child: Column(
@@ -63,7 +77,7 @@ class LoginPageState extends State<LoginPage> {
                       children: <Widget>[
                         const Padding(
                           padding:
-                              EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                              EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                           child: TextField(
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
@@ -73,7 +87,7 @@ class LoginPageState extends State<LoginPage> {
                         ),
                         const Padding(
                           padding:
-                              EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                              EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                           child: TextField(obscureText: true,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
@@ -82,9 +96,22 @@ class LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        
+                         Container(
+                          padding: const EdgeInsets.symmetric(vertical: 0.0),
+                          child: TextButton(
+                              child: Text("New User/SingUp"),
+                              //onPressed: OnLoginCallBack(emailController.text, passwordController.text)),
+                              onPressed: onNewUserPress),
+                        ),
                         Container(
-                          padding: const EdgeInsets.symmetric(vertical: 40.0),
+                          padding: const EdgeInsets.symmetric(vertical: 0.0),
+                          child: TextButton(
+                              child: Text("Forget Password"),
+                              //onPressed: OnLoginCallBack(emailController.text, passwordController.text)),
+                              onPressed: onLoginPressed),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
                           child: MaterialButton(
                               height: 50.0,
                               minWidth: 150.0,
