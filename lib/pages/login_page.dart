@@ -37,8 +37,6 @@ class LoginPageState extends State<LoginPage> {
   // TextEditingController emailController = TextEditingController();
   // TextEditingController passwordController = TextEditingController();
 
-
-
   // void onLoginPressed() {
   //   print("OnLoginPressed " +
   //       emailController.text +
@@ -87,7 +85,6 @@ class LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -153,39 +150,39 @@ class LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         Padding(
-  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16.0),
-  child: Center(
-    child: ElevatedButton(
-      onPressed: () {
-        if (_formKey.currentState!.validate()) {
-          if (emailController.text == "magan123@gmail.com" &&
-              passwordController.text == "asdfghjkl") {
-            String enteredEmail = emailController.text; // Retrieve the entered email
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => HomePage(
-                  email: enteredEmail, // Pass the entered email to HomePage
-                ),
-              ),
-            );
-          } else {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Invalid Credentials')),
-            );
-          }
-        } else {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Please fill input')),
-          );
-        }
-      },
-      child: const Text('Submit'),
-    ),
-  ),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8, vertical: 16.0),
+                          child: Center(
+                            child:ElevatedButton(
+  onPressed: () {
+    if (_formKey.currentState!.validate()) {
+      if (emailController.text == "magan@gmail.com" &&
+          passwordController.text == "asdfghjkl") {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HomePage(
+              email: emailController.text,
+            ),
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Invalid Credentials')),
+        );
+      }
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please fill input')),
+      );
+    }
+  },
+  child: const Text('Submit'),
 ),
 
-                        
+                          ),
+                        ),
+
                         Container(
                           padding: const EdgeInsets.symmetric(vertical: 0.0),
                           child: TextButton(
