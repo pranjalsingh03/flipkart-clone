@@ -93,7 +93,7 @@ class LoginPageState extends State<LoginPage> {
                       children: <Widget>[
                         const Padding(
                           padding:
-                              EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                              EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                           child: TextField(
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
@@ -103,7 +103,7 @@ class LoginPageState extends State<LoginPage> {
                         ),
                         const Padding(
                           padding:
-                              EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                              EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                           child: TextField(obscureText: true,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
@@ -115,19 +115,21 @@ class LoginPageState extends State<LoginPage> {
                          Container(
                           padding: const EdgeInsets.symmetric(vertical: 0.0),
                           child: TextButton(
-                              child: Text("New User/SingUp"),
+                              child: Text("New User/SingUp",),
                               //onPressed: OnLoginCallBack(emailController.text, passwordController.text)),
                               onPressed: onNewUserPress),
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(vertical: 0.0),
                           child: TextButton(
-                              child: Text("Forget Password"),
+                              child: Text("Forget Password",
+                              style: TextStyle(
+                                color: Color.black),),
                               //onPressed: OnLoginCallBack(emailController.text, passwordController.text)),
                               onPressed: onForgotPasswordPage),
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          padding: const EdgeInsets.symmetric(vertical: 5.0),
                           child: MaterialButton(
                               height: 50.0,
                               minWidth: 150.0,
