@@ -51,7 +51,7 @@ class LoginPageState extends State<LoginPage> {
   void _loadHomePage() {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (BuildContext context) {
-      return HomePage();
+      return HomePagetr();
     }));
   }
 
@@ -71,7 +71,7 @@ class LoginPageState extends State<LoginPage> {
           Theme(
               data: ThemeData(
                   brightness: Brightness.dark,
-                  inputDecorationTheme: InputDecorationTheme(
+                  inputDecorationTheme: const InputDecorationTheme(
                     labelStyle:
                         TextStyle(color: Colors.tealAccent, fontSize: 25.0),
                   )),
@@ -112,7 +112,7 @@ class LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                         Container(
+                        Container(
                           padding: const EdgeInsets.symmetric(vertical: 0.0),
                           child: TextButton(
                               child: Text("New User/SingUp",),
@@ -131,7 +131,7 @@ class LoginPageState extends State<LoginPage> {
                           child: MaterialButton(
                               height: 50.0,
                               minWidth: 150.0,
-                              color: Color.fromARGB(255, 19, 232, 179),
+                              color: const Color.fromARGB(255, 19, 232, 179),
                               splashColor: Colors.teal,
                               textColor: Colors.white,
                               child: Text("Login"),
