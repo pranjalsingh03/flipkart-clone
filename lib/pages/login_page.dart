@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project/pages/home_page.dart';
 import 'package:project/pages/newuser.dart';
+import 'package:project/pages/ui/homePage.dart';
 
 import 'forget_password.dart';
 
@@ -8,6 +8,34 @@ class LoginPage extends StatefulWidget {
   @override
   State createState() => LoginPageState();
 }
+
+// class Authenticate extends StatelessWidget {
+
+
+//       final String authenticateEmail;
+//       final String authenticatePassword;
+
+//       Authenticate({this.authenticateEmail, this.authenticatePassword}); 
+
+
+
+
+//       // Make a call to db to check if the data provided is correct or not 
+//       // If it is correct we then navigate the user to Home() Widget 
+//       // Else to SignIn() Widget
+
+//   @override
+//   Widget build(BuildContext context) {
+
+//      if () {
+//        return HomePage();
+//      }
+//      else {
+//        return SignupPage();
+//      }
+
+//   }
+// }
 
 class LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController();
@@ -51,7 +79,7 @@ class LoginPageState extends State<LoginPage> {
   void _loadHomePage() {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (BuildContext context) {
-      return HomePagetr();
+      return HomePage();
     }));
   }
 
@@ -62,12 +90,6 @@ class LoginPageState extends State<LoginPage> {
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          // Image(
-          //  image: AssetImage("assets/mall.png"),
-          //   fit: BoxFit.cover,
-          //   colorBlendMode: BlendMode.darken,
-          //   color: Colors.black87,
-          // ),
           Theme(
               data: ThemeData(
                   brightness: Brightness.dark,
@@ -87,7 +109,6 @@ class LoginPageState extends State<LoginPage> {
                   Container(
                     padding: const EdgeInsets.all(30.0),
                     child: Form(
-                        // autovalidate: true,
                         child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
@@ -98,9 +119,26 @@ class LoginPageState extends State<LoginPage> {
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               hintText: 'Email or Mobile No.',
+                              
                             ),
                           ),
                         ),
+                        Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                child: TextFormField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(), labelText: "Password"),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your password';
+                    }
+                    return null;
+                  },
+                ),
+              ),
                         const Padding(
                           padding:
                               EdgeInsets.symmetric(horizontal: 8, vertical: 5),
