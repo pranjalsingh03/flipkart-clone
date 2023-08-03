@@ -39,12 +39,13 @@ class _SignupPageState extends State<SignupPage> {
     return Scaffold(
       appBar: AppBar(title: Text('Signup')),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(19.0),
         child: Form(
           key: _formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Padding(padding: EdgeInsets.only(top: 50)),
               TextFormField(
                 controller: _usernameController,
                 validator: (value) {
@@ -53,8 +54,11 @@ class _SignupPageState extends State<SignupPage> {
                   }
                   return null;
                 },
-                decoration: InputDecoration(labelText: 'Username'),
+                decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Username'),
               ),
+              Padding(padding: EdgeInsets.symmetric(vertical: 7)),
               TextFormField(
                 controller: _emailController,
                 validator: (value) {
@@ -64,9 +68,12 @@ class _SignupPageState extends State<SignupPage> {
                   // You can add more complex email validation if needed
                   return null;
                 },
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(border: OutlineInputBorder(),
+                labelText: 'Email'),
               ),
+              Padding(padding: EdgeInsets.symmetric(vertical: 7)),
               TextFormField(
+                
                 controller: _passwordController,
                 obscureText: true,
                 validator: (value) {
@@ -76,13 +83,17 @@ class _SignupPageState extends State<SignupPage> {
                   // You can add more password validation rules if needed
                   return null;
                 },
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Password'),
               ),
               SizedBox(height: 20),
+              Center(
+                child:  
               ElevatedButton(
                 onPressed: _submitForm,
                 child: Text('Sign Up'),
-              ),
+              )),
             ],
           ),
         ),
