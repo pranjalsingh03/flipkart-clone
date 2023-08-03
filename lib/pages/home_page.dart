@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:project/pages/managers_page.dart';
 import '../components/bottomnav.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePagetr extends StatefulWidget {
+  const HomePagetr({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return HomePageState();
+    return HomePagetrState();
   }
 }
 
-class HomePageState extends State<HomePage> {
+class HomePagetrState extends State<HomePagetr> {
   @override
   Widget build(BuildContext context) {
     var username = "Pranjal";
