@@ -122,9 +122,7 @@ class LoginPageState extends State<LoginPage> {
                         Container(
                           padding: const EdgeInsets.symmetric(vertical: 0.0),
                           child: TextButton(
-                              child: Text("Forget Password",
-                              style: TextStyle(
-                                color: Color.black),),
+                              child: Text("Forget Password",),
                               //onPressed: OnLoginCallBack(emailController.text, passwordController.text)),
                               onPressed: onForgotPasswordPage),
                         ),
