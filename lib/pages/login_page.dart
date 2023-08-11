@@ -34,16 +34,6 @@ class LoginPage extends StatefulWidget {
 // }
 
 class LoginPageState extends State<LoginPage> {
-  // TextEditingController emailController = TextEditingController();
-  // TextEditingController passwordController = TextEditingController();
-
-  // void onLoginPressed() {
-  //   print("OnLoginPressed " +
-  //       emailController.text +
-  //       " pw : " +
-  //       passwordController.text);
-  //   _loadHomePage();
-  // }
 
   void onNewUserPress() {
     print("OnLoginPressed " +
@@ -82,9 +72,13 @@ class LoginPageState extends State<LoginPage> {
   //   }));
   // }
 
-  final _formKey = GlobalKey<FormState>();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+TextEditingController emailController = TextEditingController();
+TextEditingController passwordController = TextEditingController();
+
+  // final _formKey = GlobalKey<FormState>();
+  // TextEditingController emailController = TextEditingController();
+  // TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
